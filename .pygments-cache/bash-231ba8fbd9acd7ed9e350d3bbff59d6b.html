@@ -1,0 +1,13 @@
+<div class="highlight"><pre><span class="c"># 建立专门用户运行</span>
+adduser postgres
+<span class="c"># 数据目录</span>
+mkdir /usr/local/pgsql/data
+chown -R postgres /usr/local/pgsql
+
+<span class="c"># 切换</span>
+su - postgres
+<span class="c"># 初始化</span>
+/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
+<span class="c"># 启动</span>
+pg_ctl start -l logfile
+</pre></div>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nginx | FJZhou Notepad Online]]></title>
+  <link href="http://fjzhou.github.io/blog/categories/nginx/atom.xml" rel="self"/>
+  <link href="http://fjzhou.github.io/"/>
+  <updated>2016-01-29T13:48:21+08:00</updated>
+  <id>http://fjzhou.github.io/</id>
+  <author>
+    <name><![CDATA[FJZhou]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[屏蔽非法域名访问]]></title>
+    <link href="http://fjzhou.github.io/blog/2015/02/15/block-illegal-domain/"/>
+    <updated>2015-02-15T00:00:00+08:00</updated>
+    <id>http://fjzhou.github.io/blog/2015/02/15/block-illegal-domain</id>
+    <content type="html"><![CDATA[<h2>Nginx屏蔽非法域名访问</h2>
+
+<p>一个具有中国特色攻击方式，随便申请一个域名，不备案，然后解析到要攻击的服务器IP地址上。然后你的域名被封的时候，有一定概率会连带这对方IP也被封掉。这里使用Nginx的配置文件来屏蔽没有配置过的域名访问。</p>
+
+<!--more-->
+
+
+<pre><code>server {
+    listen 80 default_server;
+    server_name _;
+    location / {
+        proxy_pass http://block.htm;
+    }
+}
+</code></pre>
+
+<p>非法域名重定向到一个页面，上面用大字体写<code>此域名已关停</code>即可。</p>
+]]></content>
+  </entry>
+  
+</feed>

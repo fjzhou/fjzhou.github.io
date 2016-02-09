@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Postgresql | FJZhou Notepad Online]]></title>
+  <link href="http://fjzhou.github.io/blog/categories/postgresql/atom.xml" rel="self"/>
+  <link href="http://fjzhou.github.io/"/>
+  <updated>2016-01-29T13:48:21+08:00</updated>
+  <id>http://fjzhou.github.io/</id>
+  <author>
+    <name><![CDATA[FJZhou]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PostgreSQL安装配置记录]]></title>
+    <link href="http://fjzhou.github.io/blog/2016/01/29/postgresql-install-log/"/>
+    <updated>2016-01-29T13:35:00+08:00</updated>
+    <id>http://fjzhou.github.io/blog/2016/01/29/postgresql-install-log</id>
+    <content type="html"><![CDATA[<p>因为支持JSON等功能，转投PostgreSQL，目前在CentOS、OS X等上安装成功，记录一下配置过程。</p>
+
+<h3>环境</h3>
+
+<p>CentOS 7.2.1511 (Core)<br/>
+Linux 3.10.0-327.el7<br/>
+PostgreSQL版本：v9.5.0 <a href="https://ftp.postgresql.org/pub/source/v9.5.0/postgresql-9.5.0.tar.gz">下载</a></p>
+
+<!--more-->
+
+
+<h2>编译安装</h2>
+
+<pre><code class="bash">yum install readline-devel zlib-devel libxml2-devel libxslt-devel
+./configure --prefix=/usr/local/pgsql --with-libxml --with-libxslt
+make
+make install
+</code></pre>
+
+<h2>非必需步骤，安装扩展</h2>
+
+<pre><code class="bash">cd 源代码目录/contrib
+make
+make install
+</code></pre>
+
+<p>安装之后登录到数据库，可安装扩展。比如加强<a href="http://pgadmin.org/">pgAdmin</a>工具的<code>CREATE EXTENSION adminpack</code>。</p>
+
+<h2>安装完成后的操作</h2>
+
+<pre><code class="bash"># 建立专门用户运行
+adduser postgres
+# 数据目录
+mkdir /usr/local/pgsql/data
+chown -R postgres /usr/local/pgsql
+
+# 切换
+su - postgres
+# 初始化
+/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
+# 启动
+pg_ctl start -l logfile
+</code></pre>
+
+<h2>配置文件</h2>
+
+<ol>
+<li>修改<code>/etc/profile</code>，添加<code>export PGDATA=/usr/local/pgsql/data</code>作为默认数据目录。</li>
+<li>修改<code>/usr/local/pgsql/data/postgresql.conf</code>，增加<code>listen_addresses='*'</code>，修改监听IP。</li>
+<li>修改<code>/usr/local/pgsql/data/pg_hba.conf</code>，增加<code>host all all 0.0.0.0/0 md5</code>，允许用户远程登录。</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

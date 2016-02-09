@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: http://fjzhou.github.io/sitemap.xml 
