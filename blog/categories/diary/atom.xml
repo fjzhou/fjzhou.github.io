@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Diary | FJZhou Notepad Online]]></title>
   <link href="http://fjzhou.github.io/blog/categories/diary/atom.xml" rel="self"/>
   <link href="http://fjzhou.github.io/"/>
-  <updated>2016-01-29T13:48:21+08:00</updated>
+  <updated>2016-02-19T13:44:55+08:00</updated>
   <id>http://fjzhou.github.io/</id>
   <author>
     <name><![CDATA[FJZhou]]></name>
@@ -21,6 +21,11 @@
     <content type="html"><![CDATA[<p>原来使用Jekyll，UI自己修改。今天折腾了几个小时，升级到Octopress，基于Jekyll，但是好用许多。</p>
 
 <p>用MWeb写Markdown，程序托管在Coding.net，生成后发布到Github。</p>
+
+<hr />
+
+<p>Feb-19-2016 更新：
+内容也放Coding.net pages服务</p>
 ]]></content>
   </entry>
   
