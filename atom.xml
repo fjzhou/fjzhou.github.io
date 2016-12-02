@@ -4,7 +4,7 @@
   <title><![CDATA[FJZhou Notepad Online]]></title>
   <link href="http://fjzhou.github.io/atom.xml" rel="self"/>
   <link href="http://fjzhou.github.io/"/>
-  <updated>2016-02-19T13:44:55+08:00</updated>
+  <updated>2016-12-02T14:52:46+08:00</updated>
   <id>http://fjzhou.github.io/</id>
   <author>
     <name><![CDATA[FJZhou]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2016年总结]]></title>
+    <link href="http://fjzhou.github.io/blog/2016/12/02/year-2016-summary/"/>
+    <updated>2016-12-02T14:50:00+08:00</updated>
+    <id>http://fjzhou.github.io/blog/2016/12/02/year-2016-summary</id>
+    <content type="html"><![CDATA[<h1>2016年总结</h1>
+
+<p>TODO: 占坑</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PostgreSQL安装配置记录]]></title>
