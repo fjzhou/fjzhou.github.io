@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>开源协议整理 | FJZhou Notepad Online</title>
+    <title>LTE频段 | FJZhou Notepad Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="FangJun ZHOU">
     
 
     
-    <meta name="description" content="使用开源软件的几个方式：    如果软件可以独立运行，则以可执行程序的方式使用   如果软件是library，则以引用链接的方式使用   修改软件，自己使用   修改软件后发布">
+    <meta name="description" content="LTE TDD牌照发布，整理一下LTE各个频段，以后买手机做个参考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开源协议整理">
-<meta property="og:url" content="http://fjzhou.enjoydev.tech/2013/11/16/2013-11-16-open-source-license/index.html">
+<meta property="og:title" content="LTE频段">
+<meta property="og:url" content="http://fjzhou.enjoydev.tech/2013/12/05/lte-band/index.html">
 <meta property="og:site_name" content="FJZhou Notepad Online">
-<meta property="og:description" content="使用开源软件的几个方式：    如果软件可以独立运行，则以可执行程序的方式使用   如果软件是library，则以引用链接的方式使用   修改软件，自己使用   修改软件后发布">
+<meta property="og:description" content="LTE TDD牌照发布，整理一下LTE各个频段，以后买手机做个参考">
 <meta property="og:locale" content="CN">
-<meta property="article:published_time" content="2013-11-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-03-09T14:34:28.673Z">
+<meta property="article:published_time" content="2013-12-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-16T10:19:22.946Z">
 <meta property="article:author" content="FangJun ZHOU">
 <meta name="twitter:card" content="summary">
 
@@ -89,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2013/11/16/2013-11-16-open-source-license/" title="开源协议整理" itemprop="url">开源协议整理</a>
+      <a href="/2013/12/05/lte-band/" title="LTE频段" itemprop="url">LTE频段</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="FangJun ZHOU" target="_blank" itemprop="author">FangJun ZHOU</a>
 		
   <p class="article-time">
-    <time datetime="2013-11-15T16:00:00.000Z" itemprop="datePublished"> Published 2013-11-16</time>
+    <time datetime="2013-12-04T16:00:00.000Z" itemprop="datePublished"> Published 2013-12-05</time>
     
   </p>
 </header>
@@ -109,79 +109,334 @@
 		
 		</div>
 		
-		<p>使用开源软件的几个方式：  </p>
-<ol>
-<li>如果软件可以独立运行，则以可执行程序的方式使用  </li>
-<li>如果软件是library，则以引用链接的方式使用  </li>
-<li>修改软件，自己使用  </li>
-<li>修改软件后发布  </li>
-</ol>
+		<p>LTE TDD牌照发布，整理一下LTE各个频段，以后买手机做个参考 </p>
 <a id="more"></a>
 
 <table class="dataTable">
     <thead>
         <tr>
-            <th>协议</th>
-            <th>链接</th>
-            <th>修改</th>
-            <th>分发</th>
-            <th>商业闭源</th>
+            <th>Band</th>
+            <th>上行(MHz)</th>
+            <th>下行(MHz)</th>
+            <th>模式</th>
+            <th>运营商</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Public Domain</td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>公共领域软件，基本没有任何使用上的限制。比如<a href="http://sqlite.org/copyright.html" target="_blank">SQLite</a></td>
+            <td>1</td>
+            <td>1920-1980</td>
+            <td>2110-2170</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/gpl-license" target="_blank">GPL</a></td>
-            <td>只能被GPL软件链接使用（传染性）</td>
-            <td>GPL保护</td>
-            <td>以GPL分发</td>
-            <td>不允许。ASP漏洞参见下面的AGPL</td>
+            <td>2</td>
+            <td>1850-1910</td>
+            <td>1930-1990</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/lgpl-license" target="_blank">LGPL</a>（GPL的缩减版）</td>
-            <td>允许被其他协议的软件链接</td>
-            <td>LGPL保护</td>
-            <td>以LGPL分发</td>
-            <td>建议使用动态链接。因为静态链接是否属于软件衍生品有争议。这个协议专门提供给程序库使用，避免因为使用程序库而使得整个程序变成GPL的。例如<a href="http://log4cpp.sourceforge.net/#license" target="_blank">Log4Cpp</a>。</td>
+            <td>3</td>
+            <td>1710-1785</td>
+            <td>1805-1880</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL</a>（GPL的补充）</td>
-            <td>AGPL</td>
-            <td>AGPL</td>
-            <td>AGPL</td>
-            <td>不允许。为了弥补GPL的漏洞而出现。以Google为代表的网络提供者使用GPL软件，但是不分发，仅在服务端使用对外提供服务，造成事实上的商业使用而不开源。AGPL规定即使在这种情况下也需要提供代码下载。使用AGPL的其中一个例子是<a href="http://www.mongodb.org/about/licensing" target="_blank">MongoDB</a>。</td>
+            <td>4</td>
+            <td>1710-1755</td>
+            <td>2110-2155</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">Simplified BSD</a></td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>允许。但是要附上原软件的License</td>
+            <td>5</td>
+            <td>824-849</td>
+            <td>869-894</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/MIT" target="blank">MIT</a></td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>允许</td>
-            <td>允许。但是要附上原软件的License</td>
+            <td>6</td>
+            <td>830-840</td>
+            <td>865-875</td>
+            <td>FDD</td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="http://opensource.org/licenses/Apache-2.0" target="_blank">Apache</a></td>
-            <td>允许</td>
-            <td>允许。每个修改的文件都要带Apache License</td>
-            <td>允许。每个修改的文件都要带Apache License</td>
-            <td>允许。但是要附上原软件的License</td>
+            <td>7</td>
+            <td>2500-2570</td>
+            <td>2620-2690</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>880-915</td>
+            <td>925-960</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>1749.9-1784.9</td>
+            <td>1844.9-1879.9</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>1710-1770</td>
+            <td>2110-2170</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>1427.9-1447.9</td>
+            <td>1475.9-1495.9</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>698-716</td>
+            <td>728-746</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>777-787</td>
+            <td>746-756</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>788-798</td>
+            <td>758-768</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>1900-1920</td>
+            <td>2600-2620</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>2010-2025</td>
+            <td>2585-2600</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>704-716</td>
+            <td>734-746</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>815-830</td>
+            <td>860-875</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>830-845</td>
+            <td>875-890</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>832-862</td>
+            <td>791-821</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>1447.9-1462.9</td>
+            <td>1495.9-1510.9</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>3410 3500</td>
+            <td>3510-3600</td>
+            <td>FDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>2000-2020</td>
+            <td>2180-2200</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>1625.5-1660.5</td>
+            <td>1525-1559</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>1850-1915</td>
+            <td>1930-1995</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>814-849</td>
+            <td>859-894</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>807-824</td>
+            <td>852-869</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>703-748</td>
+            <td>758-803</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>1900-1920</td>
+            <td>1900-1920</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>2010-2025</td>
+            <td>2010-2025</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>1850-1910</td>
+            <td>1850-1910</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>1930-1990</td>
+            <td>1930-1990</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>1910-1930</td>
+            <td>1910-1930</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>2570-2620</td>
+            <td>2570-2620</td>
+            <td>TDD</td>
+            <td>移动(2575-2635)</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>1880-1920</td>
+            <td>1880-1920</td>
+            <td>TDD</td>
+            <td>移动(1880-1900)</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>2300-2400</td>
+            <td>2300-2400</td>
+            <td>TDD</td>
+            <td>联通(2300-2320)<br />移动(2320-2370)<br />电信(2370-2390)</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>2496-2690</td>
+            <td>2496-2690</td>
+            <td>TDD</td>
+            <td>联通(2555-2575)<br />移动(2575-2635，即Band38)<br />电信(2635-2655)</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>3400-3600</td>
+            <td>3400-3600</td>
+            <td>TDD</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>3600-3800</td>
+            <td>3600-3800</td>
+            <td>TDD</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
 
-
+<p>最新的设备列表：</p>
+<ol>
+<li>iPad Air/iPad Mini with Retina: Bands 1,2,3,4,5,7,8,13,17,18,19,20,25,26  </li>
+<li>iPhone 5S/C (A1530): Bands 1,2,3,5,7,8,20,38,39,40  </li>
+<li>iPhone 5S/C (A1453): Bands 1,2,3,4,5,8,13,17,18,19,20,25,26  </li>
+<li>Nexus 5 (North America): Bands 1,2,4,5,17,19,25,26,41  </li>
+<li>Nexus 5 (Rest of World): Bands 1,3,5,7,8,20  </li>
+<li>Samsung S4 with LTE: Bands 1,3,5,7,8,20  </li>
+<li>Samsung Note 3: Bands 1,3,5,7,8,20</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -199,7 +454,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://fjzhou.enjoydev.tech/2013/11/16/2013-11-16-open-source-license/" data-title="开源协议整理 | FJZhou Notepad Online" data-tsina="1681864792" class="share clearfix">
+	  <div data-url="http://fjzhou.enjoydev.tech/2013/12/05/lte-band/" data-title="LTE频段 | FJZhou Notepad Online" data-tsina="1681864792" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -213,18 +468,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2013/12/05/2013-12-05-lte-band/" title="LTE频段">
+ <a href="/2013/12/26/solr-config/" title="使用Jetty环境配置Solr和中文分词">
   <strong>上一篇：</strong><br/>
   <span>
-  LTE频段</span>
+  使用Jetty环境配置Solr和中文分词</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2013/09/13/2013-09-13-outlook-imap/"  title="Outlook的客户端配置参数">
+<a href="/2013/11/16/open-source-license/"  title="开源协议整理">
  <strong>下一篇：</strong><br/> 
- <span>Outlook的客户端配置参数
+ <span>开源协议整理
 </span>
 </a>
 </div>
@@ -343,7 +598,7 @@
     
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021 
 		
 		<a href="/about" target="_blank" title="FangJun ZHOU">FangJun ZHOU</a>
 		
@@ -561,7 +816,7 @@ $(document).ready(function(){
     });
 </script>
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 

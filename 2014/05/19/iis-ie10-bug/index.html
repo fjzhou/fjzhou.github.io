@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Macbook Pro with Retina入手记录 | FJZhou Notepad Online</title>
+    <title>Windows 2008 + IIS7 + IE10的奇怪Bug | FJZhou Notepad Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="FangJun ZHOU">
     
 
     
-    <meta name="description" content="2015&#x2F;6&#x2F;9购买，2015&#x2F;6&#x2F;23快递到货。 2015Early Macbook Pro with Retina 13inch&#x2F;256GB&#x2F;16GB。2015&#x2F;6&#x2F;24下单Apple Care。">
+    <meta name="description" content="Windows 2008 + IIS7环境下，如果恰好客户端是IE10，那么ASP.NET会不认识这个浏览器。最终生成的页面中Session的处理和PostBack都会不正常。这个Bug微软已经确认。KB2600100，KB2608565和KB2600088。除了补丁程序之外，如果是临时为某个站点修复，则可以使用以下方法。在根目录下的App_Browsers目录下，新建一个IE10Fix.brow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Macbook Pro with Retina入手记录">
-<meta property="og:url" content="http://fjzhou.enjoydev.tech/2015/06/24/2015-06-24-rmbp-record/index.html">
+<meta property="og:title" content="Windows 2008 + IIS7 + IE10的奇怪Bug">
+<meta property="og:url" content="http://fjzhou.enjoydev.tech/2014/05/19/iis-ie10-bug/index.html">
 <meta property="og:site_name" content="FJZhou Notepad Online">
-<meta property="og:description" content="2015&#x2F;6&#x2F;9购买，2015&#x2F;6&#x2F;23快递到货。 2015Early Macbook Pro with Retina 13inch&#x2F;256GB&#x2F;16GB。2015&#x2F;6&#x2F;24下单Apple Care。">
+<meta property="og:description" content="Windows 2008 + IIS7环境下，如果恰好客户端是IE10，那么ASP.NET会不认识这个浏览器。最终生成的页面中Session的处理和PostBack都会不正常。这个Bug微软已经确认。KB2600100，KB2608565和KB2600088。除了补丁程序之外，如果是临时为某个站点修复，则可以使用以下方法。在根目录下的App_Browsers目录下，新建一个IE10Fix.brow">
 <meta property="og:locale" content="CN">
-<meta property="article:published_time" content="2015-06-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-03-09T14:35:27.099Z">
+<meta property="article:published_time" content="2014-05-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-16T10:19:22.949Z">
 <meta property="article:author" content="FangJun ZHOU">
 <meta name="twitter:card" content="summary">
 
@@ -89,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/24/2015-06-24-rmbp-record/" title="Macbook Pro with Retina入手记录" itemprop="url">Macbook Pro with Retina入手记录</a>
+      <a href="/2014/05/19/iis-ie10-bug/" title="Windows 2008 + IIS7 + IE10的奇怪Bug" itemprop="url">Windows 2008 + IIS7 + IE10的奇怪Bug</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="FangJun ZHOU" target="_blank" itemprop="author">FangJun ZHOU</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-23T16:00:00.000Z" itemprop="datePublished"> Published 2015-06-24</time>
+    <time datetime="2014-05-18T16:00:00.000Z" itemprop="datePublished"> Published 2014-05-19</time>
     
   </p>
 </header>
@@ -109,17 +109,12 @@
 		
 		</div>
 		
-		<p>2015/6/9购买，2015/6/23快递到货。</p>
-<p>2015Early Macbook Pro with Retina 13inch/256GB/16GB。2015/6/24下单Apple Care。</p>
+		<p>Windows 2008 + IIS7环境下，如果恰好客户端是IE10，那么ASP.NET会不认识这个浏览器。<br>最终生成的页面中Session的处理和PostBack都会不正常。这个Bug微软已经确认。<br><a href="http://support.microsoft.com/kb/2600100/zh-cn" target="_blank" rel="noopener">KB2600100</a>，<br><a href="http://support.microsoft.com/kb/2608565" target="_blank" rel="noopener">KB2608565</a>和<br><a href="http://support.microsoft.com/kb/2600088" target="_blank" rel="noopener">KB2600088</a>。除了补丁程序之外，如果是临时为<br>某个站点修复，则可以使用以下方法。在根目录下的<code>App_Browsers</code>目录下，新建一个<code>IE10Fix.browser</code>文件。<br>内容：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">browsers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">browser</span> <span class="attr">refID</span>=<span class="string">"Default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">capabilities</span>&gt;</span><span class="comment">&lt;!-- To avoid wrong detections of e.g. IE10 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">capability</span> <span class="attr">name</span>=<span class="string">"cookies"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">capability</span> <span class="attr">name</span>=<span class="string">"ecmascriptversion"</span> <span class="attr">value</span>=<span class="string">"3.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">capabilities</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">browser</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">browsers</span>&gt;</span></span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Diary/">Diary</a>
-</div>
 
 
 </div>
@@ -128,7 +123,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://fjzhou.enjoydev.tech/2015/06/24/2015-06-24-rmbp-record/" data-title="Macbook Pro with Retina入手记录 | FJZhou Notepad Online" data-tsina="1681864792" class="share clearfix">
+	  <div data-url="http://fjzhou.enjoydev.tech/2014/05/19/iis-ie10-bug/" data-title="Windows 2008 + IIS7 + IE10的奇怪Bug | FJZhou Notepad Online" data-tsina="1681864792" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -142,18 +137,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/12/05/2015-12-05-update-blog/" title="升级Blog程序完成">
+ <a href="/2014/09/09/html5-device-motion/" title="HTML5下使用JS访问设备姿态">
   <strong>上一篇：</strong><br/>
   <span>
-  升级Blog程序完成</span>
+  HTML5下使用JS访问设备姿态</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/02/15/2015-02-15-block-illegal-domain/"  title="屏蔽非法域名访问">
+<a href="/2014/01/04/solrcloud-config/"  title="配置双机SolrCloud">
  <strong>下一篇：</strong><br/> 
- <span>屏蔽非法域名访问
+ <span>配置双机SolrCloud
 </span>
 </a>
 </div>
@@ -272,7 +267,7 @@
     
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021 
 		
 		<a href="/about" target="_blank" title="FangJun ZHOU">FangJun ZHOU</a>
 		
@@ -490,7 +485,7 @@ $(document).ready(function(){
     });
 </script>
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
